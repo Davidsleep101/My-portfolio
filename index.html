@@ -1,84 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+http://googleusercontent.com/immersive_entry_chip/0
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#about" class="nav-logo">YourName</a>
-      <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="about-content">
-        <img src="images/me.jpg" alt="Your Name" class="about-photo" />
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>I’m a passionate web developer building clean, modern websites from scratch.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+**Key Changes I Made:**
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2>My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+1" alt="Project 1" />
-          <h3>Project Title 1</h3>
-          <p>Short description of project 1.</p>
-        </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+2" alt="Project 2" />
-          <h3>Project Title 2</h3>
-          <p>Short description of project 2.</p>
-        </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+3" alt="Project 3" />
-          <h3>Project Title 3</h3>
-          <p>Short description of project 3.</p>
-        </div>
+* **HTML Structure:** The overall HTML structure remains the same, but the content within the sections is now personalized.
+* **Hero Section:** Updated with your name and summary.
+* **Projects Grid:**
+    * The `RTX25_0384.jpg` image is now linked correctly for the Raytheon project.
+    * I've added several more project cards based on your resume, including:
+        * ESP32 Drone Project
+        * ACM Hackathon Competition
+        * NASA Space Exploration Software Simulation
+        * District Robotics Competition
+        * Engineering & Robotics Project
+    * **Important:** For the *new* project cards, I've used generic placeholder image names like `placeholder_drone.jpg`, `placeholder_hackathon.jpg`, etc. **You will need to create and add actual images for these projects to your `images/` folder and update the `src` attributes accordingly.**
+    * I've included a `Learn More` link for each, which you'll eventually update to point to individual project detail pages (e.g., `projects/raytheon.html`).
+* **About Me Section:** Populated with your summary and a refined list of your skills, pulling directly from your resume. I also included a link to your resume PDF.
+    * **Action:** Make sure `David Falekulo PDF Resume.pdf` is in the **root directory** of your project (the same level as `index.html`) for the link to work.
+* **Contact Section:** Updated with your email and LinkedIn profile URL from your resume. I assumed your GitHub username is `davidsleep101` based on your portfolio URL; please correct this if it's different.
+* **Footer:** Updated with your name.
 
-        <!-- RTX project card added -->
-        <div class="project-card">
-          <img src="images/RTX25_0384.jpg" alt="Raytheon Autonomous Vehicle Challenge" />
-          <h3>Raytheon Autonomous Vehicle Challenge</h3>
-          <p>Participated in the RTX challenge designing and developing autonomous vehicle solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+**Next Steps for You:**
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
-      <!-- You can add a contact form here later if you want -->
-    </div>
-  </section>
+1.  **Replace `index.html`:** Copy and paste the entire code block above into your `index.html` file, overwriting its current content.
+2.  **Add Images for Projects:** Create or find images for your other projects (ESP32 Drone, Hackathon, NASA, Robotics, Engineering). Save them as `placeholder_drone.jpg`, `placeholder_hackathon.jpg`, `placeholder_nasa.jpg`, `placeholder_robotics.jpg`, `placeholder_engineering.jpg` (or whatever names you prefer, just make sure the `src` in the HTML matches) inside your `images/` folder.
+3.  **Place Resume PDF:** Ensure your `David Falekulo PDF Resume.pdf` file is in the root directory of your project (where `index.html` is).
+4.  **Save all files** (`index.html` and any new images).
+5.  **Open `index.html` in your browser** to see your updated portfolio.
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Your Name. All rights reserved.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+This will give you a much more complete and personalized website!
