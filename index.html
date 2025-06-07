@@ -1,240 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>David Falekulo Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Floating Words in Background -->
+  <div class="background-words">
+    <span>DAVID FALEKULO</span>
+    <span>DEVELOPER</span>
+    <span>PROJECTS</span>
+    <span>ENGINEER</span>
+    <span>WORK EXPERIENCE</span>
+  </div>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="nav-logo">My Portfolio</a>
+      <a href="#" class="nav-logo">David Falekulo</a>
       <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#experience">WORK-EXPERIENCE</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#resume">RESUME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- About -->
   <section id="about" class="about-section">
-    <div class="container about-content">
-      <img src="profile.jpg" alt="Profile Photo" class="about-photo" />
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>This is a short description about me.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects-section">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="project1.jpg" alt="Project 1" />
-          <h3>Project One</h3>
-          <p>Short description of the project.</p>
+      <div class="about-content">
+        <img src="images/me.jpg" alt="David Falekulo" class="about-photo" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>I’m David Falekulo, a student engineer and developer. Welcome to my portfolio!</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <p><a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <!-- Work Experience -->
+  <section id="experience" class="container">
+    <h2>Work Experience</h2>
+    <div>
+      <h3>Software Intern - XYZ Tech</h3>
+      <p>Worked on frontend development and backend APIs using JavaScript and Python.</p>
+      <p><em>May 2024 – August 2024</em></p>
+    </div>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x180.png?text=Project+1" alt="Project 1">
+          <h3>Project Title 1</h3>
+          <p>Short description of project 1.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x180.png?text=Project+2" alt="Project 2">
+          <h3>Project Title 2</h3>
+          <p>Short description of project 2.</p>
+        </div>
+        <div class="project-card">
+          <img src="images/RTX25_0384.jpg" alt="Raytheon Autonomous Vehicle Challenge">
+          <h3>Raytheon Autonomous Vehicle Challenge</h3>
+          <p>Designed and developed autonomous vehicle solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="resume-section container">
+    <h2>Resume</h2>
+    <p>You can download my resume here:</p>
+    <a href="files/David_Falekulo_Resume.pdf" target="_blank">Download Resume (PDF)</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 David Falekulo. All rights reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
-=======
-  <!-- trigger deploy -->
-  ...
-</head>
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Navbar */
-.navbar {
-  background: #000;
-  color: #fff;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-menu li a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-.about-section,
-.projects-section,
-.resume-section,
-.contact-section {
-  padding: 4rem 0;
-  position: relative;
-  z-index: 1;
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.about-photo {
-  max-width: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* Projects */
-.projects-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: #111;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 1rem;
-  color: #fff;
-}
-
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid #333;
-}
-
-.project-card h3 {
-  margin: 1rem 0 0.5rem;
-}
-
-.project-card p {
-  padding: 0 1rem;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* Contact */
-.contact-section h2 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-
-.contact-section p a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-section p a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-  background: #000;
-  color: #aaa;
-  padding: 1rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Background Words */
-.background-words {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.background-words span {
-  position: absolute;
-  font-size: 5rem;
-  font-weight: bold;
-  color: rgba(0, 255, 255, 0.08);
-  white-space: nowrap;
-}
-
-.background-words span:nth-child(1) { top: 10%; left: 5%; }
-.background-words span:nth-child(2) { top: 30%; left: 70%; }
-.background-words span:nth-child(3) { top: 60%; left: 20%; }
-.background-words span:nth-child(4) { top: 80%; left: 50%; }
-.background-words span:nth-child(5) { top: 40%; left: 35%; }
-<!-- trigger deploy -->
->>>>>>> 04aa7c665ff863194a7bf43ee7e72264de03c34f
