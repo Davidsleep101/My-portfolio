@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Name Portfolio</title>
   <style>
-    /* Reset and global styles */
     * {
       margin: 0;
       padding: 0;
@@ -21,16 +20,14 @@
       overflow-x: hidden;
     }
 
-    /* Container */
     .container {
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
       position: relative;
-      z-index: 10; /* Make sure content is above background words */
+      z-index: 10;
     }
 
-    /* Navbar */
     .navbar {
       background: #000;
       color: #fff;
@@ -64,7 +61,6 @@
       text-decoration: underline;
     }
 
-    /* Sections */
     section {
       padding: 4rem 0;
       position: relative;
@@ -87,7 +83,6 @@
       min-width: 250px;
     }
 
-    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,7 +116,6 @@
       color: #ccc;
     }
 
-    /* Contact Section */
     .contact-section {
       text-align: center;
     }
@@ -138,7 +132,6 @@
       text-decoration: underline;
     }
 
-    /* Footer */
     .footer {
       background: #000;
       color: #aaa;
@@ -149,7 +142,6 @@
       z-index: 10;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       .about-content {
         flex-direction: column;
@@ -157,48 +149,34 @@
       }
     }
 
-    /* Background words */
+    /* Background words (STATIC) */
     .background-words {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      overflow: hidden;
       z-index: 0;
     }
+
     .background-words span {
       position: absolute;
       font-size: 5rem;
       font-weight: bold;
-      color: rgba(0, 255, 255, 0.15); /* Brighter cyan words */
-      animation: floatWords 20s linear infinite;
+      color: rgba(0, 255, 255, 0.15);
       white-space: nowrap;
       user-select: none;
     }
-    .background-words span:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-    .background-words span:nth-child(2) { top: 30%; left: 70%; animation-delay: 5s; }
-    .background-words span:nth-child(3) { top: 60%; left: 20%; animation-delay: 10s; }
-    .background-words span:nth-child(4) { top: 80%; left: 50%; animation-delay: 15s; }
-    .background-words span:nth-child(5) { top: 40%; left: 35%; animation-delay: 8s; }
 
-    @keyframes floatWords {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.2;
-      }
-      100% {
-        transform: translateY(-100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
+    .background-words span:nth-child(1) { top: 10%; left: 5%; }
+    .background-words span:nth-child(2) { top: 30%; left: 70%; }
+    .background-words span:nth-child(3) { top: 60%; left: 20%; }
+    .background-words span:nth-child(4) { top: 80%; left: 50%; }
+    .background-words span:nth-child(5) { top: 40%; left: 35%; }
   </style>
 </head>
 <body>
-  <!-- Background floating words -->
   <div class="background-words">
     <span>DESIGN</span>
     <span>BUILD</span>
@@ -207,7 +185,6 @@
     <span>CREATE</span>
   </div>
 
-  <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
       <a href="#work-experience" class="nav-logo">YourName</a>
@@ -219,7 +196,6 @@
     </div>
   </nav>
 
-  <!-- Work Experience Section -->
   <section id="work-experience" class="about-section">
     <div class="container">
       <div class="about-content">
@@ -232,7 +208,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="projects-section">
     <div class="container">
       <h2>My Projects</h2>
@@ -252,17 +227,10 @@
           <h3>Project Title 3</h3>
           <p>Short description of project 3.</p>
         </div>
-
-        <div class="project-card">
-          <img src="images/RTX25_0384.jpg" alt="Raytheon Autonomous Vehicle Challenge" />
-          <h3>Raytheon Autonomous Vehicle Challenge</h3>
-          <p>Participated in the RTX challenge designing and developing autonomous vehicle solutions.</p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Resume Section -->
   <section id="resume" class="resume-section">
     <div class="container">
       <h2>Resume</h2>
@@ -271,7 +239,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Contact Me</h2>
@@ -279,7 +246,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>© 2025 Your Name. All rights reserved.</p>
