@@ -19,6 +19,48 @@
       overflow-x: hidden;
     }
 
+    /* Navigation */
+    .navbar {
+      background: #000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #333;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-menu li a:hover {
+      color: #00ffff;
+    }
+
     /* Background Words */
     .background-words {
       position: fixed;
@@ -47,7 +89,7 @@
 
     /* Hero Section */
     .hero {
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -84,7 +126,6 @@
       font-weight: 700;
     }
 
-    /* Container */
     .container {
       width: 90%;
       max-width: 1100px;
@@ -93,7 +134,6 @@
       z-index: 1;
     }
 
-    /* Section Styles */
     section {
       padding: 4rem 0;
     }
@@ -104,7 +144,6 @@
       text-align: center;
     }
 
-    /* About */
     .about-content {
       display: flex;
       align-items: center;
@@ -124,7 +163,6 @@
       min-width: 250px;
     }
 
-    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -162,7 +200,6 @@
       color: #ccc;
     }
 
-    /* Contact */
     .contact-section p {
       text-align: center;
       font-size: 1.2rem;
@@ -178,7 +215,6 @@
       text-decoration: underline;
     }
 
-    /* Footer */
     .footer {
       background: #000;
       color: #aaa;
@@ -187,7 +223,6 @@
       font-size: 0.9rem;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 4rem;
@@ -200,6 +235,7 @@
   </style>
 </head>
 <body>
+
   <!-- Background Words -->
   <div class="background-words">
     <span>CREATIVE</span>
@@ -209,52 +245,72 @@
     <span>FOCUSED</span>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">David Falekulo</a>
+      <ul class="nav-menu">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#resume">RESUME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
   <section class="hero">
     <h1>HELLO<span class="dot">.</span></h1>
     <h2>I am <span class="bracket">&lt;</span><span class="name">David Falekulo</span><span class="bracket">&gt;</span></h2>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section container">
+  <!-- About -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
     <div class="about-content">
       <img src="your-photo.jpg" alt="David Falekulo" class="about-photo" />
       <div class="about-text">
-        <h2>About Me</h2>
         <p>
-          I am a passionate developer with experience in building creative and dynamic web applications.
-          I specialize in frontend design and love combining code with visual storytelling.
+          I'm a creative developer who brings ideas to life with code. I focus on building clean, modern websites and digital experiences.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section container">
+  <!-- Projects -->
+  <section id="projects" class="container">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="project1.jpg" alt="Project 1" />
-        <h3>Project One</h3>
-        <p>A modern portfolio site showcasing animations and responsive design.</p>
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Portfolio Site</h3>
+        <p>A modern portfolio with floating background words and smooth layout.</p>
       </div>
       <div class="project-card">
-        <img src="project2.jpg" alt="Project 2" />
-        <h3>Project Two</h3>
-        <p>A weather app built using JavaScript and OpenWeatherMap API.</p>
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Weather App</h3>
+        <p>Responsive weather app using API data and animated UI.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section container">
+  <!-- Resume -->
+  <section id="resume" class="container">
+    <h2>Resume</h2>
+    <p style="text-align: center;">You can download my resume <a href="resume.pdf" style="color: #00ffff;">here</a>.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section container">
     <h2>Contact</h2>
-    <p>Email me at <a href="mailto:david@example.com">david@example.com</a></p>
+    <p>Send me an email at <a href="mailto:david@example.com">david@example.com</a></p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 David Falekulo. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
