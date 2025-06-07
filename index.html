@@ -2,20 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>David Falekulo Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David Falekulo | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: #000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #333;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-menu li a:hover {
+      color: #00ffff;
+    }
+
+    /* Background Words */
+    .background-words {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .background-words span {
+      position: absolute;
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba(0, 255, 255, 0.05);
+      white-space: nowrap;
+    }
+
+    .background-words span:nth-child(1) { top: 10%; left: 5%; }
+    .background-words span:nth-child(2) { top: 30%; left: 70%; }
+    .background-words span:nth-child(3) { top: 60%; left: 20%; }
+    .background-words span:nth-child(4) { top: 80%; left: 50%; }
+    .background-words span:nth-child(5) { top: 40%; left: 35%; }
+
+    /* Hero Section */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .hero .dot {
+      color: #00ffff;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      color: #00ffff;
+      font-weight: 500;
+    }
+
+    .hero .bracket {
+      color: #fff;
+    }
+
+    .hero .name {
+      color: #00ffff;
+      font-weight: 700;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-photo {
+      max-width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: #111;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #333;
+    }
+
+    .project-card h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .project-card p {
+      padding: 0 1rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .contact-section p {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .contact-section p a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-section p a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      background: #000;
+      color: #aaa;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Floating Words in Background -->
+  <!-- Background Words -->
   <div class="background-words">
-    <span>DAVID FALEKULO</span>
-    <span>DEVELOPER</span>
-    <span>PROJECTS</span>
-    <span>ENGINEER</span>
-    <span>WORK EXPERIENCE</span>
+    <span>CREATIVE</span>
+    <span>INNOVATOR</span>
+    <span>DESIGN</span>
+    <span>CODING</span>
+    <span>FOCUSED</span>
   </div>
 
   <!-- Navbar -->
@@ -23,7 +250,7 @@
     <div class="container">
       <a href="#" class="nav-logo">David Falekulo</a>
       <ul class="nav-menu">
-        <li><a href="#experience">WORK-EXPERIENCE</a></li>
+        <li><a href="#about">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#resume">RESUME</a></li>
         <li><a href="#contact">CONTACT</a></li>
@@ -31,75 +258,58 @@
     </div>
   </nav>
 
+  <!-- Hero -->
+  <section class="hero">
+    <h1>HELLO<span class="dot">.</span></h1>
+    <h2>I am <span class="bracket">&lt;</span><span class="name">David Falekulo</span><span class="bracket">&gt;</span></h2>
+  </section>
+
   <!-- About -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="about-content">
-        <img src="images/me.jpg" alt="David Falekulo" class="about-photo" />
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>I’m David Falekulo, a student engineer and developer. Welcome to my portfolio!</p>
-        </div>
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="your-photo.jpg" alt="David Falekulo" class="about-photo" />
+      <div class="about-text">
+        <p>
+          I'm a creative developer who brings ideas to life with code. I focus on building clean, modern websites and digital experiences.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Work Experience -->
-  <section id="experience" class="container">
-    <h2>Work Experience</h2>
-    <div>
-      <h3>Software Intern - XYZ Tech</h3>
-      <p>Worked on frontend development and backend APIs using JavaScript and Python.</p>
-      <p><em>May 2024 – August 2024</em></p>
-    </div>
-  </section>
-
   <!-- Projects -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+1" alt="Project 1">
-          <h3>Project Title 1</h3>
-          <p>Short description of project 1.</p>
-        </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+2" alt="Project 2">
-          <h3>Project Title 2</h3>
-          <p>Short description of project 2.</p>
-        </div>
-        <div class="project-card">
-          <img src="images/RTX25_0384.jpg" alt="Raytheon Autonomous Vehicle Challenge">
-          <h3>Raytheon Autonomous Vehicle Challenge</h3>
-          <p>Designed and developed autonomous vehicle solutions.</p>
-        </div>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Portfolio Site</h3>
+        <p>A modern portfolio with floating background words and smooth layout.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Weather App</h3>
+        <p>Responsive weather app using API data and animated UI.</p>
       </div>
     </div>
   </section>
 
   <!-- Resume -->
-  <section id="resume" class="resume-section container">
+  <section id="resume" class="container">
     <h2>Resume</h2>
-    <p>You can download my resume here:</p>
-    <a href="files/David_Falekulo_Resume.pdf" target="_blank">Download Resume (PDF)</a>
+    <p style="text-align: center;">You can download my resume <a href="resume.pdf" style="color: #00ffff;">here</a>.</p>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
-    </div>
+  <section id="contact" class="contact-section container">
+    <h2>Contact</h2>
+    <p>Send me an email at <a href="mailto:david@example.com">david@example.com</a></p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 David Falekulo. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 David Falekulo. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
-.
