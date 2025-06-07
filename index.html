@@ -4,8 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tobenna U Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .hero .dot {
+      color: #00ffff;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      color: #00ffff;
+      font-weight: 500;
+    }
+
+    .hero .bracket {
+      color: #fff;
+    }
+
+    .hero .name {
+      color: #00ffff;
+      font-weight: 700;
+    }
+
+    .background-words {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .background-words span {
+      position: absolute;
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba(0, 255, 255, 0.05);
+      white-space: nowrap;
+    }
+
+    .background-words span:nth-child(1) { top: 10%; left: 5%; }
+    .background-words span:nth-child(2) { top: 30%; left: 70%; }
+    .background-words span:nth-child(3) { top: 60%; left: 20%; }
+    .background-words span:nth-child(4) { top: 80%; left: 50%; }
+    .background-words span:nth-child(5) { top: 40%; left: 35%; }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="background-words">
@@ -16,61 +101,9 @@
     <span>FOCUSED</span>
   </div>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="nav-logo">Tobenna U</a>
-      <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <section class="hero">
     <h1>HELLO<span class="dot">.</span></h1>
     <h2>I am <span class="bracket">&lt;</span><span class="name">Tobenna U</span><span class="bracket">&gt;</span></h2>
   </section>
-
-  <section id="about" class="about-section container">
-    <div class="about-content">
-      <img src="your-photo.jpg" alt="Tobenna U" class="about-photo" />
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Passionate developer with experience in modern web technologies and UI/UX design. I create beautiful and functional digital experiences.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects-section container">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1" />
-        <h3>Project One</h3>
-        <p>A modern website built using React and Tailwind CSS.</p>
-      </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 2" />
-        <h3>Project Two</h3>
-        <p>An eCommerce solution using Shopify and custom code.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume" class="resume-section container">
-    <h2>Resume</h2>
-    <p>Download my <a href="#">Resume PDF</a> or connect with me on <a href="#">LinkedIn</a>.</p>
-  </section>
-
-  <section id="contact" class="contact-section container">
-    <h2>Contact</h2>
-    <p>Email me at <a href="mailto:your@email.com">your@email.com</a></p>
-  </section>
-
-  <footer class="footer">
-    &copy; 2025 Tobenna U. All rights reserved.
-  </footer>
 </body>
 </html>
