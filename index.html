@@ -2,51 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Portfolio</title>
+  <title>Test Floating Words</title>
   <style>
-    /* Reset and global styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000;
-      color: #fff;
-      line-height: 1.6;
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
       position: relative;
-      z-index: 1;
+      height: 100vh;
+      color: white;
     }
-
-    /* Background floating words */
     .background-words {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       pointer-events: none;
       overflow: hidden;
       z-index: 0;
     }
-
     .background-words span {
       position: absolute;
       font-size: 5rem;
       font-weight: bold;
       color: rgba(0, 255, 255, 0.05);
-      animation: floatWords 30s linear infinite;
+      animation: floatWords 20s linear infinite;
       white-space: nowrap;
     }
-
     .background-words span:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
     .background-words span:nth-child(2) { top: 30%; left: 70%; animation-delay: 5s; }
     .background-words span:nth-child(3) { top: 60%; left: 20%; animation-delay: 10s; }
     .background-words span:nth-child(4) { top: 80%; left: 50%; animation-delay: 15s; }
-    .background-words span:nth-child(5) { top: 40%; left: 35%; animation-delay: 20s; }
+    .background-words span:nth-child(5) { top: 40%; left: 35%; animation-delay: 8s; }
 
     @keyframes floatWords {
       0% {
@@ -61,148 +48,9 @@
         opacity: 0;
       }
     }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .navbar {
-      background: #000;
-      color: #fff;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-menu li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .nav-menu li a:hover {
-      text-decoration: underline;
-    }
-
-    .about-section,
-    .projects-section,
-    .contact-section,
-    .resume-section {
-      padding: 4rem 0;
-      background: transparent;
-    }
-
-    .about-content {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .about-photo {
-      max-width: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    }
-
-    .about-text {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .projects-section h2,
-    .resume-section h2,
-    .contact-section h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .project-card {
-      background: #111;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 1rem;
-      transition: transform 0.3s ease;
-      color: #fff;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 1px solid #333;
-    }
-
-    .project-card h3 {
-      margin: 1rem 0 0.5rem;
-    }
-
-    .project-card p {
-      padding: 0 1rem;
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    .contact-section p a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-section p a:hover {
-      text-decoration: underline;
-    }
-
-    .footer {
-      background: #000;
-      color: #aaa;
-      padding: 1rem 0;
-      text-align: center;
-      font-size: 0.9rem;
-    }
   </style>
 </head>
 <body>
-
-  <!-- Background Words -->
   <div class="background-words">
     <span>DESIGN</span>
     <span>BUILD</span>
@@ -210,83 +58,5 @@
     <span>ENGINEER</span>
     <span>CREATE</span>
   </div>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#work-experience" class="nav-logo">YourName</a>
-      <ul class="nav-menu">
-        <li><a href="#work-experience">WORK-EXPERIENCE</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#resume">RESUME</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Work Experience -->
-  <section id="work-experience" class="about-section">
-    <div class="container">
-      <div class="about-content">
-        <img src="images/me.jpg" alt="Your Name" class="about-photo" />
-        <div class="about-text">
-          <h2>Work Experience</h2>
-          <p>Describe your work experience, skills, and background here.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2>My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+1" alt="Project 1" />
-          <h3>Project Title 1</h3>
-          <p>Short description of project 1.</p>
-        </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+2" alt="Project 2" />
-          <h3>Project Title 2</h3>
-          <p>Short description of project 2.</p>
-        </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x180.png?text=Project+3" alt="Project 3" />
-          <h3>Project Title 3</h3>
-          <p>Short description of project 3.</p>
-        </div>
-        <div class="project-card">
-          <img src="images/RTX25_0384.jpg" alt="RTX Challenge" />
-          <h3>Raytheon Autonomous Vehicle Challenge</h3>
-          <p>Participated in the RTX challenge designing and developing autonomous vehicle solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resume Section -->
-  <section id="resume" class="resume-section">
-    <div class="container">
-      <h2>Resume</h2>
-      <p>You can download my resume here:</p>
-      <a href="files/YourName_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Your Name. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
