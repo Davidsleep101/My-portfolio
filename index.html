@@ -1,31 +1,97 @@
-http://googleusercontent.com/immersive_entry_chip/0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Your Name</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-**Key Changes I Made:**
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Hi, I'm Your Name.</h1>
+                <p>I'm a [Your Profession/Interest, e.g., Software Engineer, UX Designer, Photographer] passionate about [Your Passion].</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </section>
 
-* **HTML Structure:** The overall HTML structure remains the same, but the content within the sections is now personalized.
-* **Hero Section:** Updated with your name and summary.
-* **Projects Grid:**
-    * The `RTX25_0384.jpg` image is now linked correctly for the Raytheon project.
-    * I've added several more project cards based on your resume, including:
-        * ESP32 Drone Project
-        * ACM Hackathon Competition
-        * NASA Space Exploration Software Simulation
-        * District Robotics Competition
-        * Engineering & Robotics Project
-    * **Important:** For the *new* project cards, I've used generic placeholder image names like `placeholder_drone.jpg`, `placeholder_hackathon.jpg`, etc. **You will need to create and add actual images for these projects to your `images/` folder and update the `src` attributes accordingly.**
-    * I've included a `Learn More` link for each, which you'll eventually update to point to individual project detail pages (e.g., `projects/raytheon.html`).
-* **About Me Section:** Populated with your summary and a refined list of your skills, pulling directly from your resume. I also included a link to your resume PDF.
-    * **Action:** Make sure `David Falekulo PDF Resume.pdf` is in the **root directory** of your project (the same level as `index.html`) for the link to work.
-* **Contact Section:** Updated with your email and LinkedIn profile URL from your resume. I assumed your GitHub username is `davidsleep101` based on your portfolio URL; please correct this if it's different.
-* **Footer:** Updated with your name.
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/placeholder.jpg" alt="Project 1 Thumbnail">
+                        <h3>Project Title 1</h3>
+                        <p>A brief description of Project 1.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/placeholder.jpg" alt="Project 2 Thumbnail">
+                        <h3>Project Title 2</h3>
+                        <p>A brief description of Project 2.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/placeholder.jpg" alt="Project 3 Thumbnail">
+                        <h3>Project Title 3</h3>
+                        <p>A brief description of Project 3.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                    </div>
+            </div>
+        </section>
 
-**Next Steps for You:**
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Write a compelling paragraph or two about your background, skills, and what drives you. Highlight your passions and what you bring to a team or project.</p>
+                <p>Mention key skills: e.g., HTML, CSS, JavaScript, Python, UI/UX Design, etc.</p>
+                <a href="#" class="btn">Download My Resume</a>
+            </div>
+        </section>
 
-1.  **Replace `index.html`:** Copy and paste the entire code block above into your `index.html` file, overwriting its current content.
-2.  **Add Images for Projects:** Create or find images for your other projects (ESP32 Drone, Hackathon, NASA, Robotics, Engineering). Save them as `placeholder_drone.jpg`, `placeholder_hackathon.jpg`, `placeholder_nasa.jpg`, `placeholder_robotics.jpg`, `placeholder_engineering.jpg` (or whatever names you prefer, just make sure the `src` in the HTML matches) inside your `images/` folder.
-3.  **Place Resume PDF:** Ensure your `David Falekulo PDF Resume.pdf` file is in the root directory of your project (where `index.html` is).
-4.  **Save all files** (`index.html` and any new images).
-5.  **Open `index.html` in your browser** to see your updated portfolio.
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>I'm always open to new opportunities and collaborations!</p>
+                <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                    </div>
+            </div>
+        </section>
 
-This will give you a much more complete and personalized website!
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Automatically update the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
