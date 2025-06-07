@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Reset and global styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,157 +6,171 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d0d0d;
-  color: #f1f1f1;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
   line-height: 1.6;
 }
 
+/* Container */
 .container {
+  width: 90%;
   max-width: 1100px;
-  margin: auto;
-  padding: 2rem;
+  margin: 0 auto;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #111;
-  border-bottom: 1px solid #222;
-  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00ffff;
+  color: #fff;
   text-decoration: none;
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-menu li a {
-  color: #f1f1f1;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .nav-menu li a:hover {
-  color: #00ffff;
+  text-decoration: underline;
 }
 
-/* Sections */
-section {
-  padding: 5rem 0;
-}
-
-/* About / Work Experience */
+/* About Section */
 .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 4rem 0;
+  background: #000;
 }
 
 .about-content {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .about-photo {
-  width: 250px;
-  border-radius: 1rem;
-  border: 2px solid #00ffff;
+  max-width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.about-text h2 {
-  font-size: 2rem;
-  color: #00ffff;
+.about-text {
+  flex: 1;
+  min-width: 250px;
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
+/* Projects Section */
+.projects-section {
+  padding: 4rem 0;
+  background-color: #000;
 }
 
-/* Projects */
 .projects-section h2 {
-  font-size: 2rem;
-  color: #00ffff;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 .project-card {
-  background-color: #1a1a1a;
-  border-radius: 1rem;
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  padding-bottom: 1rem;
   transition: transform 0.3s ease;
+  color: #fff;
 }
 
 .project-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
 }
 
 .project-card h3 {
-  color: #00ffff;
-  font-size: 1.2rem;
-  margin: 1rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .project-card p {
-  padding: 0 1rem 1rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  color: #ccc;
 }
 
-/* Resume */
-.resume-section h2 {
-  font-size: 2rem;
-  color: #00ffff;
-  margin-bottom: 1rem;
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  text-align: center;
+  background: #000;
 }
 
-.resume-section a {
-  color: #00ffff;
-  text-decoration: underline;
-}
-
-/* Contact */
 .contact-section h2 {
-  font-size: 2rem;
-  color: #00ffff;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
-.contact-section a {
-  color: #00ffff;
+.contact-section p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-section p a:hover {
   text-decoration: underline;
 }
 
 /* Footer */
 .footer {
-  background-color: #111;
+  background: #000;
+  color: #aaa;
+  padding: 1rem 0;
   text-align: center;
-  padding: 2rem 0;
-  border-top: 1px solid #222;
-  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
 }
