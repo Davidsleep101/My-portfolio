@@ -2,119 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tobenna U | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #111;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    .logo {
-      width: 60px;
-      height: auto;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-bottom: 1px solid transparent;
-    }
-
-    nav a:hover {
-      border-bottom: 1px solid #2fc5a9;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 90vh;
-      padding: 0 1rem;
-    }
-
-    .hero h1 {
-      font-size: 6rem;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .hero h1 .dot {
-      color: #2fc5a9;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-top: 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .hero h2 .name {
-      color: #2fc5a9;
-      font-weight: 700;
-    }
-
-    .hero h2 .bracket {
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 4rem;
-      }
-
-      .hero h2 {
-        font-size: 1.8rem;
-      }
-
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tobenna U Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="background-words">
+    <span>CREATIVE</span>
+    <span>INNOVATOR</span>
+    <span>DESIGN</span>
+    <span>CODING</span>
+    <span>FOCUSED</span>
+  </div>
 
-  <!-- Header -->
-  <header>
-    <img src="logo.png" alt="Logo" class="logo" />
-    <nav>
-      <a href="#work-experience">WORK-EXPERIENCE</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#resume">RESUME</a>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">Tobenna U</a>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h1>HELLO<span class="dot">.</span></h1>
     <h2>I am <span class="bracket">&lt;</span><span class="name">Tobenna U</span><span class="bracket">&gt;</span></h2>
   </section>
 
+  <section id="about" class="about-section container">
+    <div class="about-content">
+      <img src="your-photo.jpg" alt="Tobenna U" class="about-photo" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Passionate developer with experience in modern web technologies and UI/UX design. I create beautiful and functional digital experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1" />
+        <h3>Project One</h3>
+        <p>A modern website built using React and Tailwind CSS.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2" />
+        <h3>Project Two</h3>
+        <p>An eCommerce solution using Shopify and custom code.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume-section container">
+    <h2>Resume</h2>
+    <p>Download my <a href="#">Resume PDF</a> or connect with me on <a href="#">LinkedIn</a>.</p>
+  </section>
+
+  <section id="contact" class="contact-section container">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:your@email.com">your@email.com</a></p>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Tobenna U. All rights reserved.
+  </footer>
 </body>
 </html>
