@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>David Falekulo | Portfolio</title>
+  <title>Tobenna U Portfolio</title>
   <style>
     * {
       margin: 0;
@@ -19,47 +19,7 @@
       overflow-x: hidden;
     }
 
-    .navbar {
-      background: #000;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #333;
-    }
-
-    .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .nav-logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #00ffff;
-      text-decoration: none;
-    }
-
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-menu li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .nav-menu li a:hover {
-      color: #00ffff;
-    }
-
+    /* Background Words */
     .background-words {
       position: fixed;
       top: 0;
@@ -85,8 +45,9 @@
     .background-words span:nth-child(4) { top: 80%; left: 50%; }
     .background-words span:nth-child(5) { top: 40%; left: 35%; }
 
+    /* Hero Section */
     .hero {
-      min-height: 90vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -123,6 +84,7 @@
       font-weight: 700;
     }
 
+    /* Container */
     .container {
       width: 90%;
       max-width: 1100px;
@@ -131,6 +93,7 @@
       z-index: 1;
     }
 
+    /* Section Styles */
     section {
       padding: 4rem 0;
     }
@@ -141,14 +104,27 @@
       text-align: center;
     }
 
-    .about-text,
-    .resume-text {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
+    /* About */
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
+    .about-photo {
+      max-width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -186,6 +162,7 @@
       color: #ccc;
     }
 
+    /* Contact */
     .contact-section p {
       text-align: center;
       font-size: 1.2rem;
@@ -201,6 +178,7 @@
       text-decoration: underline;
     }
 
+    /* Footer */
     .footer {
       background: #000;
       color: #aaa;
@@ -209,6 +187,7 @@
       font-size: 0.9rem;
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 4rem;
@@ -221,7 +200,6 @@
   </style>
 </head>
 <body>
-
   <!-- Background Words -->
   <div class="background-words">
     <span>CREATIVE</span>
@@ -231,71 +209,52 @@
     <span>FOCUSED</span>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="nav-logo">David Falekulo</a>
-      <ul class="nav-menu">
-        <li><a href="#experience">WORK-EXPERIENCE</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#resume">RESUME</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>HELLO<span class="dot">.</span></h1>
-    <h2>I am <span class="bracket">&lt;</span><span class="name">David Falekulo</span><span class="bracket">&gt;</span></h2>
+    <h2>I am <span class="bracket">&lt;</span><span class="name">Tobenna U</span><span class="bracket">&gt;</span></h2>
   </section>
 
-  <!-- Work Experience -->
-  <section id="experience" class="container">
-    <h2>Work Experience</h2>
-    <div class="about-text">
-      <p>
-        📌 Intern at XYZ Company – Contributed to frontend design with HTML/CSS and interactive JavaScript features.  
-        📌 Student Developer – Worked on multiple class-based web projects using React, Python, and APIs.
-      </p>
+  <!-- About Section -->
+  <section class="about-section container">
+    <div class="about-content">
+      <img src="your-photo.jpg" alt="Tobenna U" class="about-photo" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate developer with experience in building creative and dynamic web applications.
+          I specialize in frontend design and love combining code with visual storytelling.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
+  <!-- Projects Section -->
+  <section class="projects-section container">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Portfolio Website</h3>
-        <p>A fully responsive personal portfolio with floating words and custom animations.</p>
+        <img src="project1.jpg" alt="Project 1" />
+        <h3>Project One</h3>
+        <p>A modern portfolio site showcasing animations and responsive design.</p>
       </div>
       <div class="project-card">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>API Weather App</h3>
-        <p>Fetches real-time weather using JavaScript and OpenWeatherMap API.</p>
+        <img src="project2.jpg" alt="Project 2" />
+        <h3>Project Two</h3>
+        <p>A weather app built using JavaScript and OpenWeatherMap API.</p>
       </div>
     </div>
   </section>
 
-  <!-- Resume -->
-  <section id="resume" class="container">
-    <h2>Resume</h2>
-    <div class="resume-text">
-      <p>You can download my resume <a href="resume.pdf" style="color: #00ffff;">here</a>.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact-section container">
+  <!-- Contact Section -->
+  <section class="contact-section container">
     <h2>Contact</h2>
-    <p>Send me an email at <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
+    <p>Email me at <a href="mailto:tobenna@example.com">tobenna@example.com</a></p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 David Falekulo. All rights reserved.</p>
+    <p>&copy; 2025 Tobenna U. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
