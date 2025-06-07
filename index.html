@@ -1,97 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">Your Name</a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#about" class="nav-logo">YourName</a>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <img src="images/me.jpg" alt="Your Name" class="about-photo" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>I’m a passionate web developer building clean, modern websites from scratch.</p>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <h1>Hi, I'm Your Name.</h1>
-                <p>I'm a [Your Profession/Interest, e.g., Software Engineer, UX Designer, Photographer] passionate about [Your Passion].</p>
-                <a href="#projects" class="btn">View My Work</a>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="images/placeholder.jpg" alt="Project 1 Thumbnail">
-                        <h3>Project Title 1</h3>
-                        <p>A brief description of Project 1.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/placeholder.jpg" alt="Project 2 Thumbnail">
-                        <h3>Project Title 2</h3>
-                        <p>A brief description of Project 2.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/placeholder.jpg" alt="Project 3 Thumbnail">
-                        <h3>Project Title 3</h3>
-                        <p>A brief description of Project 3.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Write a compelling paragraph or two about your background, skills, and what drives you. Highlight your passions and what you bring to a team or project.</p>
-                <p>Mention key skills: e.g., HTML, CSS, JavaScript, Python, UI/UX Design, etc.</p>
-                <a href="#" class="btn">Download My Resume</a>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <p>I'm always open to new opportunities and collaborations!</p>
-                <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-                    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-                    </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x180.png?text=Project+1" alt="Project 1" />
+          <h3>Project Title 1</h3>
+          <p>Short description of project 1.</p>
         </div>
-    </footer>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x180.png?text=Project+2" alt="Project 2" />
+          <h3>Project Title 2</h3>
+          <p>Short description of project 2.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x180.png?text=Project+3" alt="Project 3" />
+          <h3>Project Title 3</h3>
+          <p>Short description of project 3.</p>
+        </div>
 
-    <script>
-        // Automatically update the current year in the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+        <!-- RTX project card added -->
+        <div class="project-card">
+          <img src="images/RTX25_0384.jpg" alt="Raytheon Autonomous Vehicle Challenge" />
+          <h3>Raytheon Autonomous Vehicle Challenge</h3>
+          <p>Participated in the RTX challenge designing and developing autonomous vehicle solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <!-- You can add a contact form here later if you want -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
