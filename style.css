@@ -7,11 +7,13 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #000;
+  background: url('background-ai.png') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
 }
+
 
 /* Container */
 .container {
