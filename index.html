@@ -212,28 +212,31 @@
       text-decoration: underline;
     }
 
-    .connect-section p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-    }
-
-    .connect-section a {
-      color: #00ffff;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .connect-section a:hover {
-      text-decoration: underline;
-    }
-
     .footer {
       background: #000;
       color: #aaa;
-      padding: 1rem 0;
+      padding: 2rem 0 1rem;
       text-align: center;
       font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -243,6 +246,11 @@
 
       .hero h2 {
         font-size: 1.5rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
       }
     }
   </style>
@@ -319,15 +327,13 @@
     <p>Send me an email at <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
   </section>
 
-  <!-- Connect Section -->
-  <section class="connect-section container">
-    <h2>Connect With Me</h2>
-    <p><strong>LINKEDIN:</strong> <a href="https://www.linkedin.com/in/david-falekulo/" target="_blank">Click Here</a></p>
-    <p><strong>MAIL:</strong> <a href="mailto:dfalekulo@pvamu.edu">Click to Email Me</a></p>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/david-falekulo/" target="_blank">LINKEDIN</a>
+      <a href="mailto:dfalekulo@pvamu.edu">MAIL</a>
+      <a href="resume.pdf" target="_blank">RESUME</a>
+    </div>
     <p>&copy; 2025 David Falekulo. All rights reserved.</p>
   </footer>
 
