@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>David Falekulo | Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background-color: #000;
@@ -18,7 +13,6 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
     .navbar {
       background: #000;
       padding: 1rem 0;
@@ -27,7 +21,6 @@
       z-index: 10;
       border-bottom: 1px solid #333;
     }
-
     .navbar .container {
       display: flex;
       justify-content: space-between;
@@ -36,30 +29,25 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
     .nav-logo {
       font-size: 1.5rem;
       font-weight: bold;
       color: #00ffff;
       text-decoration: none;
     }
-
     .nav-menu {
       list-style: none;
       display: flex;
       gap: 1.5rem;
     }
-
     .nav-menu li a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
     }
-
     .nav-menu li a:hover {
       color: #00ffff;
     }
-
     .background-words {
       position: fixed;
       top: 0;
@@ -70,7 +58,6 @@
       overflow: hidden;
       z-index: 0;
     }
-
     .background-words span {
       position: absolute;
       font-size: 5rem;
@@ -78,13 +65,11 @@
       color: rgba(0, 255, 255, 0.05);
       white-space: nowrap;
     }
-
     .background-words span:nth-child(1) { top: 10%; left: 5%; }
     .background-words span:nth-child(2) { top: 30%; left: 70%; }
     .background-words span:nth-child(3) { top: 60%; left: 20%; }
     .background-words span:nth-child(4) { top: 80%; left: 50%; }
     .background-words span:nth-child(5) { top: 40%; left: 35%; }
-
     .hero {
       min-height: 90vh;
       display: flex;
@@ -96,33 +81,19 @@
       z-index: 1;
       padding: 2rem;
     }
-
-    .hero h1 {
-      font-size: 8rem;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .hero .dot {
-      color: #00ffff;
-    }
-
+    .hero h1 { font-size: 8rem; font-weight: bold; color: #fff; }
+    .hero .dot { color: #00ffff; }
     .hero h2 {
       font-size: 2.5rem;
       margin-top: 1rem;
       color: #00ffff;
       font-weight: 500;
     }
-
-    .hero .bracket {
-      color: #fff;
-    }
-
+    .hero .bracket { color: #fff; }
     .hero .name {
       color: #00ffff;
       font-weight: 700;
     }
-
     .container {
       width: 90%;
       max-width: 1100px;
@@ -130,42 +101,33 @@
       position: relative;
       z-index: 1;
     }
-
-    section {
-      padding: 4rem 0;
-    }
-
+    section { padding: 4rem 0; }
     h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
       text-align: center;
     }
-
     .about-content {
       display: flex;
       align-items: center;
       gap: 2rem;
       flex-wrap: wrap;
     }
-
     .about-photo {
       max-width: 200px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     }
-
     .about-text {
       flex: 1;
       min-width: 250px;
     }
-
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
-
     .project-card {
       background: #111;
       border-radius: 8px;
@@ -175,43 +137,33 @@
       padding-bottom: 1rem;
       transition: transform 0.3s ease;
     }
-
     .project-card:hover {
       transform: translateY(-5px);
     }
-
     .project-card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
       border-bottom: 1px solid #333;
     }
-
-    .project-card h3 {
-      margin: 1rem 0 0.5rem;
-    }
-
+    .project-card h3 { margin: 1rem 0 0.5rem; }
     .project-card p {
       padding: 0 1rem;
       font-size: 1rem;
       color: #ccc;
     }
-
     .contact-section p {
       text-align: center;
       font-size: 1.2rem;
     }
-
     .contact-section p a {
       color: #00ffff;
       text-decoration: none;
       font-weight: 600;
     }
-
     .contact-section p a:hover {
       text-decoration: underline;
     }
-
     .footer {
       background: #000;
       color: #aaa;
@@ -222,32 +174,22 @@
       flex-direction: column;
       align-items: center;
     }
-
     .footer-links {
       display: flex;
       gap: 2rem;
       margin-bottom: 1rem;
     }
-
     .footer-links a {
       color: #00ffff;
       text-decoration: none;
       font-weight: 600;
     }
-
     .footer-links a:hover {
       text-decoration: underline;
     }
-
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 4rem;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-
+      .hero h1 { font-size: 4rem; }
+      .hero h2 { font-size: 1.5rem; }
       .footer-links {
         flex-direction: column;
         gap: 0.5rem;
@@ -291,9 +233,7 @@
     <div class="about-content">
       <img src="your-photo.jpg" alt="David Falekulo" class="about-photo" />
       <div class="about-text">
-        <p>
-          I'm a creative developer who brings ideas to life with code. I focus on building clean, modern websites and digital experiences.
-        </p>
+        <p>I'm a creative developer who brings ideas to life with code. I focus on building clean, modern websites and digital experiences.</p>
       </div>
     </div>
   </section>
@@ -319,7 +259,6 @@
   <section id="resume" class="container">
     <h2>Resume</h2>
     <div style="color: #ccc; line-height: 1.8; max-width: 800px; margin: 0 auto;">
-
       <p><strong>David J. Falekulo</strong><br>
       <a href="mailto:dfalekulo@pvamu.edu" style="color: #00ffff;">dfalekulo@pvamu.edu</a> | 346-434-6757 |
       <a href="https://www.linkedin.com/in/david-falekulo/" target="_blank" style="color: #00ffff;">LinkedIn</a></p>
@@ -330,66 +269,4 @@
       Relevant Coursework: GenAI and Python, Web Development, Computer Science</p>
 
       <h3>Summary</h3>
-      <p>Innovative computer science student focused on embedded systems, robotics, and real-time software.
-      Experienced with UAV development, embedded Linux, and hardware/software integration using Python and C++.</p>
-
-      <h3>Skills</h3>
-      <ul>
-        <li><strong>Programming:</strong> C++, Python, Java, HTML/CSS, SQL</li>
-        <li><strong>Data Tools:</strong> Pandas, SQL, Jupyter Notebook</li>
-        <li><strong>Tech/Frameworks:</strong> Linux/Unix, Git/GitHub, VSCode, Microsoft 365, Google Cloud, Raspberry Pi, CAD, Thingiverse</li>
-        <li><strong>Languages:</strong> English, Yoruba</li>
-      </ul>
-
-      <h3>Work Experience & Projects</h3>
-      <p><strong>Raytheon Autonomous Vehicle Competition – Lead UAV Programmer</strong> (Apr 2025)<br>
-      Programmed UAV for autonomous flight using ROS 1.2 and Python. Designed and 3D-printed parts, coordinated a $15,000 project with 10-member team.</p>
-
-      <p><strong>ESP32 Drone Project – Lead Embedded Developer</strong> (Jun 2025)<br>
-      Built quadcopter with ESP32, Wi-Fi control, IMU balance, and PID loop tuning. Designed modular 3D-printed frame.</p>
-
-      <p><strong>ACM Hackathon Competition</strong> (Feb 2025)<br>
-      Front-end developer of an AI tax assistant web tool. Achieved 1st place among 6 teams.</p>
-
-      <p><strong>NASA Space Exploration Software Simulation</strong> (Dec 2024)<br>
-      Gained hands-on experience in UNIX/Linux systems and aerospace simulation via CACI. Earned certification and practiced C++ development for simulation.</p>
-
-      <p><strong>Phillips 66 HBCU Project</strong> (Sept 2024)<br>
-      Completed 7 business/technical modules with a teammate, placing 1st and meeting project deadlines.</p>
-
-      <p><strong>District Robotics Competition</strong> (Mar 2023 – May 2024)<br>
-      Designed, built, and programmed a competitive robot. Collaborated with team on performance optimization across multiple schools.</p>
-
-      <p><strong>Engineering & Robotics Project – Houston, TX</strong> (Jun 2023 – Aug 2024)<br>
-      3D-printed telephone prototype and built a robotic arm for object handling and manipulation. Improved performance through iterative design.</p>
-
-      <h3>Certifications & Organizations</h3>
-      <ul>
-        <li><strong>Organizations:</strong> ACM, NSBE, Robotics Club</li>
-        <li><strong>Certifications:</strong> CompTIA Security+, CACI Aerospace Certificate</li>
-      </ul>
-
-      <p style="margin-top: 2rem;">
-        <a href="David-Falekulo-Resume.pdf" target="_blank" style="color: #00ffff; font-weight: 600;">Download Resume PDF</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact-section container">
-    <h2>Contact</h2>
-    <p>Send me an email at <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/david-falekulo/" target="_blank">LINKEDIN</a>
-      <a href="mailto:dfalekulo@pvamu.edu">MAIL</a>
-      <a href="David-Falekulo-Resume.pdf" target="_blank">RESUME</a>
-    </div>
-    <p>&copy; 2025 David Falekulo. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+      <p>Innovative computer science student focus
