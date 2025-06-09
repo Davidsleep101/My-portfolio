@@ -3,3 +3,41 @@
   <h3>Raytheon Autonomous Vehicle Challenge</h3>
   <p>Participated in the RTX challenge designing and developing autonomous vehicle solutions.</p>
 </div>
+<!-- Modal for RTX Project -->
+<div id="rtxModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <button class="prev" onclick="plusSlides(-1)">❮</button>
+    <button class="next" onclick="plusSlides(1)">❯</button>
+    <img src="images/rtx1.jpg" class="slide">
+    <img src="images/rtx2.jpg" class="slide">
+    <img src="images/rtx3.jpg" class="slide">
+    <img src="images/rtx4.jpg" class="slide">
+    <img src="images/rtx5.jpg" class="slide">
+    <img src="images/rtx6.jpg" class="slide">
+    <img src="images/rtx7.jpg" class="slide">
+    <img src="images/rtx8.jpg" class="slide">
+  </div>
+</div>
+
+<script>
+let currentSlide = 0;
+function openModal() {
+  document.getElementById('rtxModal').style.display = "flex";
+  showSlides(currentSlide);
+}
+function closeModal() {
+  document.getElementById('rtxModal').style.display = "none";
+}
+function plusSlides(n) {
+  const slides = document.querySelectorAll("#rtxModal .slide");
+  slides[currentSlide].style.display = "none";
+  currentSlide = (currentSlide + n + slides.length) % slides.length;
+  slides[currentSlide].style.display = "block";
+}
+function showSlides(n) {
+  const slides = document.querySelectorAll("#rtxModal .slide");
+  slides.forEach(slide => slide.style.display = "none");
+  slides[n].style.display = "block";
+}
+</script>
