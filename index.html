@@ -302,35 +302,7 @@
   <section id="projects" class="container">
     <h2>Projects</h2>
     <div class="projects-grid">
-        <!-- existing project cards here -->
-    <div class="project-card" onclick="openModal()">
-      <img src="images/rtx1.jpg" alt="Raytheon Project Cover">
-      <h3>Raytheon Autonomous Vehicle Competition</h3>
-      <p>Click to view slideshow of the UAV project.</p>
-      <!-- Modal for RTX Project -->
-
-<script>
-let currentSlide = 0;
-function openModal() {
-  document.getElementById('rtxModal').style.display = "flex";
-  showSlides(currentSlide);
-}
-function closeModal() {
-  document.getElementById('rtxModal').style.display = "none";
-}
-function plusSlides(n) {
-  const slides = document.querySelectorAll("#rtxModal .slide");
-  slides[currentSlide].style.display = "none";
-  currentSlide = (currentSlide + n + slides.length) % slides.length;
-  slides[currentSlide].style.display = "block";
-}
-function showSlides(n) {
-  const slides = document.querySelectorAll("#rtxModal .slide");
-  slides.forEach(slide => slide.style.display = "none");
-  slides[n].style.display = "block";
-}
-</script>
-
+       
     </div>
   </div>
 </section>
