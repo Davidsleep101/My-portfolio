@@ -120,6 +120,7 @@ body {
 
 .about-photo {
   max-width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
@@ -128,8 +129,31 @@ body {
 .about-text {
   flex: 1;
   min-width: 250px;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
+.about-text {
+  flex: 1;
+  min-width: 250px;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
 /* Projects Section */
 .projects-section h2 {
   text-align: center;
