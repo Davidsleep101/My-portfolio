@@ -175,8 +175,7 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr;
     }
 
     .project-card {
@@ -186,18 +185,6 @@
       overflow: hidden;
       text-align: center;
       padding-bottom: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 1px solid #333;
     }
 
     .project-card h3 {
@@ -224,26 +211,59 @@
       object-fit: cover;
       border-radius: 8px;
       border: 1px solid #333;
-      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
-    .gallery-image:hover {
-      transform: scale(1.05);
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      flex-direction: column;
     }
 
-    .contact-section p {
-      text-align: center;
-      font-size: 1.2rem;
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
     }
 
-    .contact-section p a {
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 48px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .nav-arrows {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+      transform: translateY(-50%);
+    }
+
+    .nav-arrows .prev,
+    .nav-arrows .next {
       color: #00ffff;
-      text-decoration: none;
-      font-weight: 600;
+      font-size: 48px;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
     }
 
-    .contact-section p a:hover {
-      text-decoration: underline;
+    .nav-arrows .prev:hover,
+    .nav-arrows .next:hover {
+      color: #fff;
     }
 
     .footer {
@@ -273,54 +293,6 @@
 
     .footer-links a:hover {
       text-decoration: underline;
-    }
-
-    /* Lightbox styles */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
-    .lightbox:target {
-      display: flex;
-    }
-
-    .lightbox .close {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-      font-size: 40px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 4rem;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-
-      .footer-links {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
     }
   </style>
 </head>
@@ -370,15 +342,15 @@
         <h3>RTX AI Project</h3>
         <p>Leveraging NVIDIA RTX for high-performance deep learning and AI model acceleration.</p>
         <div class="project-gallery">
-          <a href="#img1"><img src="images/rtx-project.jpg" alt="RTX 1" class="gallery-image"></a>
-          <a href="#img2"><img src="images/rtx-project-2.jpg" alt="RTX 2" class="gallery-image"></a>
-          <a href="#img3"><img src="images/rtx-project-3.JPG" alt="RTX 3" class="gallery-image"></a>
-          <a href="#img4"><img src="images/rtx-project-4.jpg" alt="RTX 4" class="gallery-image"></a>
-          <a href="#img5"><img src="images/rtx-project-5.jpg" alt="RTX 5" class="gallery-image"></a>
-          <a href="#img6"><img src="images/rtx-project-6.jpg" alt="RTX 6" class="gallery-image"></a>
-          <a href="#img7"><img src="images/rtx-project-7.jpg" alt="RTX 7" class="gallery-image"></a>
-          <a href="#img8"><img src="images/rtx-project-8.jpg" alt="RTX 8" class="gallery-image"></a>
-          <a href="#img9"><img src="images/rtx-project-9.jpg" alt="RTX 9" class="gallery-image"></a>
+          <img src="images/rtx-project.jpg" class="gallery-image" onclick="openLightbox(0)">
+          <img src="images/rtx-project-2.jpg" class="gallery-image" onclick="openLightbox(1)">
+          <img src="images/rtx-project-3.JPG" class="gallery-image" onclick="openLightbox(2)">
+          <img src="images/rtx-project-4.jpg" class="gallery-image" onclick="openLightbox(3)">
+          <img src="images/rtx-project-5.jpg" class="gallery-image" onclick="openLightbox(4)">
+          <img src="images/rtx-project-6.jpg" class="gallery-image" onclick="openLightbox(5)">
+          <img src="images/rtx-project-7.jpg" class="gallery-image" onclick="openLightbox(6)">
+          <img src="images/rtx-project-8.jpg" class="gallery-image" onclick="openLightbox(7)">
+          <img src="images/rtx-project-9.jpg" class="gallery-image" onclick="openLightbox(8)">
         </div>
       </div>
     </div>
@@ -403,15 +375,50 @@
     <p>&copy; 2025 David Falekulo. All rights reserved.</p>
   </footer>
 
-  <!-- Lightbox popups -->
-  <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project.jpg"></div>
-  <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-2.jpg"></div>
-  <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-3.JPG"></div>
-  <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-4.jpg"></div>
-  <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-5.jpg"></div>
-  <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-6.jpg"></div>
-  <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-7.jpg"></div>
-  <div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-8.jpg"></div>
-  <div id="img9" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-9.jpg"></div>
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Lightbox Image">
+    <div class="nav-arrows">
+      <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+      <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      "images/rtx-project.jpg",
+      "images/rtx-project-2.jpg",
+      "images/rtx-project-3.JPG",
+      "images/rtx-project-4.jpg",
+      "images/rtx-project-5.jpg",
+      "images/rtx-project-6.jpg",
+      "images/rtx-project-7.jpg",
+      "images/rtx-project-8.jpg",
+      "images/rtx-project-9.jpg"
+    ];
+
+    let currentImageIndex = 0;
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      document.getElementById("lightbox-img").src = images[index];
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeSlide(direction) {
+      currentImageIndex += direction;
+      if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+      if (currentImageIndex >= images.length) currentImageIndex = 0;
+      document.getElementById("lightbox-img").src = images[currentImageIndex];
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
 </body>
 </html>
