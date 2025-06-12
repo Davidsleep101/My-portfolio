@@ -210,6 +210,27 @@
       color: #ccc;
     }
 
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .gallery-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #333;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
+
     .contact-section p {
       text-align: center;
       font-size: 1.2rem;
@@ -309,28 +330,26 @@
     </div>
   </section>
 
-<section id="projects" class="container">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3>RTX AI Project</h3>
-      <p>Leveraging NVIDIA RTX for high-performance deep learning and AI model acceleration.</p>
-
-      <div class="project-gallery">
-        <img src="images/rtx1.jpg" alt="RTX 1" class="gallery-image">
-        <img src="images/rtx2.jpg" alt="RTX 2" class="gallery-image">
-        <img src="images/rtx3.jpg" alt="RTX 3" class="gallery-image">
-        <img src="images/rtx4.jpg" alt="RTX 4" class="gallery-image">
-        <img src="images/rtx5.jpg" alt="RTX 5" class="gallery-image">
-        <img src="images/rtx6.jpg" alt="RTX 6" class="gallery-image">
-        <img src="images/rtx7.jpg" alt="RTX 7" class="gallery-image">
-        <img src="images/rtx8.jpg" alt="RTX 8" class="gallery-image">
-        <img src="images/rtx9.jpg" alt="RTX 9" class="gallery-image">
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>RTX AI Project</h3>
+        <p>Leveraging NVIDIA RTX for high-performance deep learning and AI model acceleration.</p>
+        <div class="project-gallery">
+          <img src="images/rtx1.jpg" alt="RTX 1" class="gallery-image">
+          <img src="images/rtx2.jpg" alt="RTX 2" class="gallery-image">
+          <img src="images/rtx3.jpg" alt="RTX 3" class="gallery-image">
+          <img src="images/rtx4.jpg" alt="RTX 4" class="gallery-image">
+          <img src="images/rtx5.jpg" alt="RTX 5" class="gallery-image">
+          <img src="images/rtx6.jpg" alt="RTX 6" class="gallery-image">
+          <img src="images/rtx7.jpg" alt="RTX 7" class="gallery-image">
+          <img src="images/rtx8.jpg" alt="RTX 8" class="gallery-image">
+          <img src="images/rtx9.jpg" alt="RTX 9" class="gallery-image">
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <section id="resume" class="container">
     <h2>Resume</h2>
