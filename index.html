@@ -1,4 +1,3 @@
-You said:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -276,6 +275,39 @@ You said:
       text-decoration: underline;
     }
 
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 4rem;
@@ -337,17 +369,17 @@ You said:
       <div class="project-card">
         <h3>RTX AI Project</h3>
         <p>Leveraging NVIDIA RTX for high-performance deep learning and AI model acceleration.</p>
-       <div class="project-gallery">
-  <img src="images/rtx-project.jpg" alt="RTX 1" class="gallery-image">
-  <img src="images/rtx-project-2.jpg" alt="RTX 2" class="gallery-image">
-  <img src="images/rtx-project-3.JPG" alt="RTX 3" class="gallery-image">
-  <img src="images/rtx-project-4.jpg" alt="RTX 4" class="gallery-image">
-  <img src="images/rtx-project-5.jpg" alt="RTX 5" class="gallery-image">
-  <img src="images/rtx-project-6.jpg" alt="RTX 6" class="gallery-image">
-  <img src="images/rtx-project-7.jpg" alt="RTX 7" class="gallery-image">
-  <img src="images/rtx-project-8.jpg" alt="RTX 8" class="gallery-image">
-  <img src="images/rtx-project-9.jpg" alt="RTX 9" class="gallery-image">
-</div>
+        <div class="project-gallery">
+          <a href="#img1"><img src="images/rtx-project.jpg" alt="RTX 1" class="gallery-image"></a>
+          <a href="#img2"><img src="images/rtx-project-2.jpg" alt="RTX 2" class="gallery-image"></a>
+          <a href="#img3"><img src="images/rtx-project-3.JPG" alt="RTX 3" class="gallery-image"></a>
+          <a href="#img4"><img src="images/rtx-project-4.jpg" alt="RTX 4" class="gallery-image"></a>
+          <a href="#img5"><img src="images/rtx-project-5.jpg" alt="RTX 5" class="gallery-image"></a>
+          <a href="#img6"><img src="images/rtx-project-6.jpg" alt="RTX 6" class="gallery-image"></a>
+          <a href="#img7"><img src="images/rtx-project-7.jpg" alt="RTX 7" class="gallery-image"></a>
+          <a href="#img8"><img src="images/rtx-project-8.jpg" alt="RTX 8" class="gallery-image"></a>
+          <a href="#img9"><img src="images/rtx-project-9.jpg" alt="RTX 9" class="gallery-image"></a>
+        </div>
       </div>
     </div>
   </section>
@@ -370,5 +402,16 @@ You said:
     </div>
     <p>&copy; 2025 David Falekulo. All rights reserved.</p>
   </footer>
+
+  <!-- Lightbox popups -->
+  <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project.jpg"></div>
+  <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-2.jpg"></div>
+  <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-3.JPG"></div>
+  <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-4.jpg"></div>
+  <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-5.jpg"></div>
+  <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-6.jpg"></div>
+  <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-7.jpg"></div>
+  <div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-8.jpg"></div>
+  <div id="img9" class="lightbox"><a href="#" class="close">&times;</a><img src="images/rtx-project-9.jpg"></div>
 </body>
 </html>
