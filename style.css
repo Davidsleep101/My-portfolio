@@ -1,274 +1,345 @@
-/* Reset and global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Falekulo | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: url('images/background-ai.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('images/background-ai.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
 
-/* Ensure content stays above overlay */
-body > *:not(.overlay) {
-  position: relative;
-  z-index: 1;
-}
+    body > *:not(.overlay) {
+      position: relative;
+      z-index: 1;
+    }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-/* Navbar */
-.navbar {
-  background: #000;
-  color: #fff;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+    .navbar {
+      background: #000;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
 
-.nav-menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
+    .nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-.nav-menu li a:hover {
-  text-decoration: underline;
-}
+    .nav-menu li a:hover {
+      text-decoration: underline;
+    }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 1;
-  position: relative;
-  padding: 4rem 1rem;
-}
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+      padding: 4rem 1rem;
+    }
 
-.hero h1 {
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
+    .hero h1 {
+      font-size: 6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
 
-.hero .dot {
-  color: #2fc5a9;
-}
+    .hero .dot {
+      color: #2fc5a9;
+    }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-top: 1rem;
-  font-weight: 400;
-}
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      font-weight: 400;
+    }
 
-.hero .bracket {
-  color: #fff;
-}
+    .hero .bracket {
+      color: #fff;
+    }
 
-.hero .name {
-  color: #2fc5a9;
-  font-weight: bold;
-}
+    .hero .name {
+      color: #2fc5a9;
+      font-weight: bold;
+    }
 
-/* About Section */
-.about-section,
-.projects-section,
-.resume-section,
-.contact-section,
-.navbar {
-  position: relative;
-  z-index: 1;
-  padding: 4rem 0;
-  background: #000;
-}
+    .about-section,
+    .projects-section,
+    .resume-section,
+    .contact-section,
+    .navbar {
+      position: relative;
+      z-index: 1;
+      padding: 4rem 0;
+      background: #000;
+    }
 
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
 
-.about-photo {
-  max-width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
+    .about-photo {
+      max-width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
 
-.about-text {
-  flex: 1;
-  min-width: 250px;
-  color: #fff;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
 
-/* Projects Section */
-.projects-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
+    .projects-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
 
-.project-card {
-  background: #111;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 1rem;
-  transition: transform 0.3s ease;
-  color: #fff;
-}
+    .project-card {
+      background: #111;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.3s ease;
+      color: #fff;
+    }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
 
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid #333;
-}
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 1rem;
+    }
 
-.project-card h3 {
-  margin: 1rem 0 0.5rem;
-}
+    .gallery-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
 
-.project-card p {
-  padding: 0 1rem;
-  font-size: 1rem;
-  color: #ccc;
-}
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
 
-/* Contact Section */
-.contact-section h2 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
+    .contact-section h2 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
 
-.contact-section p a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
+    .contact-section p a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.contact-section p a:hover {
-  text-decoration: underline;
-}
+    .contact-section p a:hover {
+      text-decoration: underline;
+    }
 
-/* Footer */
-.footer {
-  background: #000;
-  color: #aaa;
-  padding: 1rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-}
+    .footer {
+      background: #000;
+      color: #aaa;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
 
-/* Background Words (STATIC) */
-.background-words {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
+    .background-words {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
 
-.background-words span {
-  position: absolute;
-  font-size: 5rem;
-  font-weight: bold;
-  color: rgba(0, 255, 255, 0.08);
-  white-space: nowrap;
-}
+    .background-words span {
+      position: absolute;
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba(0, 255, 255, 0.08);
+      white-space: nowrap;
+    }
 
-.background-words span:nth-child(1) { top: 10%; left: 5%; }
-.background-words span:nth-child(2) { top: 30%; left: 70%; }
-.background-words span:nth-child(3) { top: 60%; left: 20%; }
-.background-words span:nth-child(4) { top: 80%; left: 50%; }
-.background-words span:nth-child(5) { top: 40%; left: 35%; }
+    .background-words span:nth-child(1) { top: 10%; left: 5%; }
+    .background-words span:nth-child(2) { top: 30%; left: 70%; }
+    .background-words span:nth-child(3) { top: 60%; left: 20%; }
+    .background-words span:nth-child(4) { top: 80%; left: 50%; }
+    .background-words span:nth-child(5) { top: 40%; left: 35%; }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 3.5rem;
-  }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
 
-  .hero h2 {
-    font-size: 1.8rem;
-  }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
 
-  .nav-menu {
-    flex-direction: column;
-    gap: 1rem;
-  }
+      .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-  .about-text {
-    max-width: 100%;
-  }
-}
+      .about-text {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">David Falekulo</a>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="hero">
+    <h1><span class="bracket">[</span><span class="name">David</span><span class="bracket">]</span><span class="dot">.</span></h1>
+    <h2>Software Developer & AI Enthusiast</h2>
+  </header>
+  <section id="projects" class="projects-section container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>RTX AI Project</h3>
+        <p>Exploring AI power with NVIDIA RTX. Click an image to enlarge.</p>
+        <div class="project-gallery">
+          <img src="images/rtx1.jpg" alt="RTX 1" class="gallery-image">
+          <img src="images/rtx2.jpg" alt="RTX 2" class="gallery-image">
+          <img src="images/rtx3.jpg" alt="RTX 3" class="gallery-image">
+          <img src="images/rtx4.jpg" alt="RTX 4" class="gallery-image">
+          <img src="images/rtx5.jpg" alt="RTX 5" class="gallery-image">
+          <img src="images/rtx6.jpg" alt="RTX 6" class="gallery-image">
+          <img src="images/rtx7.jpg" alt="RTX 7" class="gallery-image">
+          <img src="images/rtx8.jpg" alt="RTX 8" class="gallery-image">
+          <img src="images/rtx9.jpg" alt="RTX 9" class="gallery-image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 David Falekulo. All rights reserved.</p>
+  </footer>
+  <script>
+    document.querySelectorAll('.gallery-image').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox';
+        overlay.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+        overlay.onclick = () => overlay.remove();
+        document.body.appendChild(overlay);
+      });
+    });
+  </script>
+  <style>
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  </style>
+</body>
+</html>
