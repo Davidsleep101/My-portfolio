@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>David Falekulo | Portfolio</title>
   <style>
     * {
@@ -13,8 +13,10 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #000;
+      background: url('images/background-ai.png') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
+      line-height: 1.6;
     }
 
     .navbar {
@@ -59,112 +61,112 @@
     }
 
     .hero {
-      min-height: 90vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
     }
 
     .hero h1 {
-      font-size: 8rem;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .hero .dot {
-      color: #00ffff;
+      font-size: 6rem;
     }
 
     .hero h2 {
-      font-size: 2.5rem;
-      margin-top: 1rem;
+      font-size: 2rem;
       color: #00ffff;
-      font-weight: 500;
     }
 
-    .container {
+    section {
+      padding: 4rem 0;
       width: 90%;
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
     }
 
-    .project-gallery {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about-content {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-
-    .gallery-image {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-image:hover {
-      transform: scale(1.05);
-    }
-
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
       align-items: center;
-      flex-direction: column;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
-    #lightbox img {
-      max-width: 80%;
-      max-height: 80%;
+    .about-photo {
+      max-width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card {
+      text-align: center;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 600px;
+      margin: 2rem auto;
+      overflow: hidden;
       border-radius: 10px;
     }
 
-    .lightbox-controls {
-      margin-top: 10px;
+    .slides {
       display: flex;
-      gap: 20px;
-      align-items: center;
+      transition: transform 0.5s ease-in-out;
     }
 
-    .lightbox-button {
-      background: none;
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
       border: none;
       font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .footer {
+      background: #000;
+      color: #aaa;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
       color: #00ffff;
-      cursor: pointer;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2rem;
-      cursor: pointer;
-      color: #fff;
-    }
-
-    @media (max-width: 600px) {
-      #lightbox img {
-        max-width: 95%;
-      }
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="container">
       <a href="#" class="nav-logo">David Falekulo</a>
@@ -178,71 +180,65 @@
   </nav>
 
   <section class="hero">
-    <h1>HELLO<span class="dot">.</span></h1>
+    <h1>HELLO.</h1>
     <h2>I am <span class="name">David Falekulo</span></h2>
   </section>
 
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project-gallery">
-      <img src="images/rtx-project.jpg" alt="RTX 1" class="gallery-image">
-      <img src="images/rtx-project-2.jpg" alt="RTX 2" class="gallery-image">
-      <img src="images/rtx-project-3.JPG" alt="RTX 3" class="gallery-image">
-      <img src="images/rtx-project-4.jpg" alt="RTX 4" class="gallery-image">
-      <img src="images/rtx-project-5.jpg" alt="RTX 5" class="gallery-image">
-      <img src="images/rtx-project-6.jpg" alt="RTX 6" class="gallery-image">
-      <img src="images/rtx-project-7.jpg" alt="RTX 7" class="gallery-image">
-      <img src="images/rtx-project-8.jpg" alt="RTX 8" class="gallery-image">
-      <img src="images/rtx-project-9.jpg" alt="RTX 9" class="gallery-image">
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="images/david-photo.jpg" alt="David Falekulo" class="about-photo" />
+      <div>
+        <p>I’m a creative developer who brings ideas to life with code. I focus on building clean, modern websites and digital experiences.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Lightbox Modal -->
-  <div id="lightbox">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="Full view">
-    <div class="lightbox-controls">
-      <button class="lightbox-button" onclick="prevImage()">&#8592;</button>
-      <button class="lightbox-button" onclick="nextImage()">&#8594;</button>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>RTX AI Project</h3>
+      <p>Leveraging NVIDIA RTX for high-performance deep learning and AI model acceleration.</p>
+      <div class="slider">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slides" id="slides">
+          <img src="images/rtx-project.jpg" alt="Slide 1">
+          <img src="images/rtx-project-2.jpg" alt="Slide 2">
+          <img src="images/rtx-project-3.JPG" alt="Slide 3">
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p style="text-align: center;">You can download my resume <a href="David-Falekulo-Resume.pdf" style="color: #00ffff;">here</a>.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align: center;">Send me an email at <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/david-falekulo/" target="_blank">LINKEDIN</a>
+      <a href="mailto:dfalekulo@pvamu.edu">MAIL</a>
+      <a href="David-Falekulo-Resume.pdf" target="_blank">RESUME</a>
+    </div>
+    <p>&copy; 2025 David Falekulo. All rights reserved.</p>
+  </footer>
 
   <script>
-    const images = document.querySelectorAll('.gallery-image');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    let currentIndex = 0;
+    let slideIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
 
-    function showImage(index) {
-      lightboxImg.src = images[index].src;
-      lightbox.style.display = 'flex';
-      currentIndex = index;
+    function moveSlide(step) {
+      slideIndex = (slideIndex + step + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
     }
-
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-    }
-
-    function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      lightboxImg.src = images[currentIndex].src;
-    }
-
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      lightboxImg.src = images[currentIndex].src;
-    }
-
-    images.forEach((img, index) => {
-      img.addEventListener('click', () => showImage(index));
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
   </script>
-
 </body>
 </html>
