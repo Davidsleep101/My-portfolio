@@ -13,23 +13,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: url('images/background-ai.png') no-repeat center center fixed;
-      background-size: cover;
+      background: #000;
       color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-      z-index: 0;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 0;
     }
 
     .navbar {
@@ -73,31 +58,6 @@
       color: #00ffff;
     }
 
-    .background-words {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .background-words span {
-      position: absolute;
-      font-size: 5rem;
-      font-weight: bold;
-      color: rgba(0, 255, 255, 0.05);
-      white-space: nowrap;
-    }
-
-    .background-words span:nth-child(1) { top: 10%; left: 5%; }
-    .background-words span:nth-child(2) { top: 30%; left: 70%; }
-    .background-words span:nth-child(3) { top: 60%; left: 20%; }
-    .background-words span:nth-child(4) { top: 80%; left: 50%; }
-    .background-words span:nth-child(5) { top: 40%; left: 35%; }
-
     .hero {
       min-height: 90vh;
       display: flex;
@@ -105,8 +65,6 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
-      z-index: 2;
       padding: 2rem;
     }
 
@@ -127,184 +85,85 @@
       font-weight: 500;
     }
 
-    .hero .bracket {
-      color: #fff;
-    }
-
-    .hero .name {
-      color: #00ffff;
-      font-weight: 700;
-    }
-
     .container {
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    section {
-      padding: 4rem 0;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .about-content {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .about-photo {
-      max-width: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    }
-
-    .about-text {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .project-card {
-      background: #111;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-
-    .project-card h3 {
-      margin: 1rem 0 0.5rem;
-    }
-
-    .project-card p {
-      padding: 0 1rem;
-      font-size: 1rem;
-      color: #ccc;
     }
 
     .project-gallery {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 10px;
       margin-top: 1rem;
+      justify-content: center;
     }
 
     .gallery-image {
       width: 100px;
       height: 100px;
       object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #333;
       cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
 
-    .lightbox {
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
+
+    #lightbox {
       display: none;
       position: fixed;
+      z-index: 999;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
-      z-index: 999;
       flex-direction: column;
     }
 
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80vh;
+    #lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
     }
 
-    .close {
+    .lightbox-controls {
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .lightbox-button {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #00ffff;
+      cursor: pointer;
+    }
+
+    .lightbox-close {
       position: absolute;
       top: 20px;
-      right: 40px;
-      font-size: 48px;
-      color: #fff;
+      right: 30px;
+      font-size: 2rem;
       cursor: pointer;
-    }
-
-    .nav-arrows {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 40px;
-      transform: translateY(-50%);
-    }
-
-    .nav-arrows .prev,
-    .nav-arrows .next {
-      color: #00ffff;
-      font-size: 48px;
-      cursor: pointer;
-      user-select: none;
-      transition: 0.3s;
-    }
-
-    .nav-arrows .prev:hover,
-    .nav-arrows .next:hover {
       color: #fff;
     }
 
-    .footer {
-      background: #000;
-      color: #aaa;
-      padding: 2rem 0 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 2;
-      position: relative;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .footer-links a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
+    @media (max-width: 600px) {
+      #lightbox img {
+        max-width: 95%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="background-words">
-    <span>CREATIVE</span>
-    <span>INNOVATOR</span>
-    <span>DESIGN</span>
-    <span>CODING</span>
-    <span>FOCUSED</span>
-  </div>
 
   <nav class="navbar">
     <div class="container">
@@ -320,105 +179,70 @@
 
   <section class="hero">
     <h1>HELLO<span class="dot">.</span></h1>
-    <h2>I am <span class="bracket">&lt;</span><span class="name">David Falekulo</span><span class="bracket">&gt;</span></h2>
-  </section>
-
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="images/david-photo.jpg" alt="David Falekulo" class="about-photo" />
-      <div class="about-text">
-        <p>
-          I’m a creative developer who brings ideas to life with code. I focus on building clean, modern websites and digital experiences.
-        </p>
-      </div>
-    </div>
+    <h2>I am <span class="name">David Falekulo</span></h2>
   </section>
 
   <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>RTX AI Project</h3>
-        <p>Leveraging NVIDIA RTX for high-performance deep learning and AI model acceleration.</p>
-        <div class="project-gallery">
-          <img src="images/rtx-project.jpg" class="gallery-image" onclick="openLightbox(0)">
-          <img src="images/rtx-project-2.jpg" class="gallery-image" onclick="openLightbox(1)">
-          <img src="images/rtx-project-3.JPG" class="gallery-image" onclick="openLightbox(2)">
-          <img src="images/rtx-project-4.jpg" class="gallery-image" onclick="openLightbox(3)">
-          <img src="images/rtx-project-5.jpg" class="gallery-image" onclick="openLightbox(4)">
-          <img src="images/rtx-project-6.jpg" class="gallery-image" onclick="openLightbox(5)">
-          <img src="images/rtx-project-7.jpg" class="gallery-image" onclick="openLightbox(6)">
-          <img src="images/rtx-project-8.jpg" class="gallery-image" onclick="openLightbox(7)">
-          <img src="images/rtx-project-9.jpg" class="gallery-image" onclick="openLightbox(8)">
-        </div>
-      </div>
+    <div class="project-gallery">
+      <img src="images/rtx-project.jpg" alt="RTX 1" class="gallery-image">
+      <img src="images/rtx-project-2.jpg" alt="RTX 2" class="gallery-image">
+      <img src="images/rtx-project-3.JPG" alt="RTX 3" class="gallery-image">
+      <img src="images/rtx-project-4.jpg" alt="RTX 4" class="gallery-image">
+      <img src="images/rtx-project-5.jpg" alt="RTX 5" class="gallery-image">
+      <img src="images/rtx-project-6.jpg" alt="RTX 6" class="gallery-image">
+      <img src="images/rtx-project-7.jpg" alt="RTX 7" class="gallery-image">
+      <img src="images/rtx-project-8.jpg" alt="RTX 8" class="gallery-image">
+      <img src="images/rtx-project-9.jpg" alt="RTX 9" class="gallery-image">
     </div>
   </section>
 
-  <section id="resume" class="container">
-    <h2>Resume</h2>
-    <p style="text-align: center;">You can download my resume <a href="David-Falekulo-Resume.pdf" style="color: #00ffff;">here</a>.</p>
-  </section>
-
-  <section id="contact" class="contact-section container">
-    <h2>Contact</h2>
-    <p>Send me an email at <a href="mailto:dfalekulo@pvamu.edu">dfalekulo@pvamu.edu</a></p>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/david-falekulo/" target="_blank">LINKEDIN</a>
-      <a href="mailto:dfalekulo@pvamu.edu">MAIL</a>
-      <a href="David-Falekulo-Resume.pdf" target="_blank">RESUME</a>
-    </div>
-    <p>&copy; 2025 David Falekulo. All rights reserved.</p>
-  </footer>
-
-  <div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="Lightbox Image">
-    <div class="nav-arrows">
-      <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-      <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  <!-- Lightbox Modal -->
+  <div id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Full view">
+    <div class="lightbox-controls">
+      <button class="lightbox-button" onclick="prevImage()">&#8592;</button>
+      <button class="lightbox-button" onclick="nextImage()">&#8594;</button>
     </div>
   </div>
 
   <script>
-    const images = [
-      "images/rtx-project.jpg",
-      "images/rtx-project-2.jpg",
-      "images/rtx-project-3.JPG",
-      "images/rtx-project-4.jpg",
-      "images/rtx-project-5.jpg",
-      "images/rtx-project-6.jpg",
-      "images/rtx-project-7.jpg",
-      "images/rtx-project-8.jpg",
-      "images/rtx-project-9.jpg"
-    ];
+    const images = document.querySelectorAll('.gallery-image');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentIndex = 0;
 
-    let currentImageIndex = 0;
-
-    function openLightbox(index) {
-      currentImageIndex = index;
-      document.getElementById("lightbox-img").src = images[index];
-      document.getElementById("lightbox").style.display = "flex";
+    function showImage(index) {
+      lightboxImg.src = images[index].src;
+      lightbox.style.display = 'flex';
+      currentIndex = index;
     }
 
     function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
+      lightbox.style.display = 'none';
     }
 
-    function changeSlide(direction) {
-      currentImageIndex += direction;
-      if (currentImageIndex < 0) currentImageIndex = images.length - 1;
-      if (currentImageIndex >= images.length) currentImageIndex = 0;
-      document.getElementById("lightbox-img").src = images[currentImageIndex];
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      lightboxImg.src = images[currentIndex].src;
     }
 
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeLightbox();
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    }
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => showImage(index));
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
     });
   </script>
+
 </body>
 </html>
